@@ -2,6 +2,18 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Trophy, Users, Clock, Gift, Star, Award, Info, X, Baby, Heart, User, Package, Cookie, Wind, Circle, Gamepad2, LineChart, Cone, Droplets, Anchor, Footprints, Square, LucideIcon, Play } from 'lucide-react';
 
+// Import gambar
+import goyangKardus from '../assets/goyang kardus.jpeg';
+import makanBiskuit from '../assets/makan biskuit.jpeg';
+import tiupGelas from '../assets/tiup gelas.jpeg';
+import tiupBola from '../assets/tiup bola.jpeg';
+import balapKarung from '../assets/balap karung helem.jpeg';
+import trenggiling from '../assets/teringgiling kardus.jpeg';
+import corong from '../assets/corong.jpeg';
+import cantolanGalon from '../assets/cantolan galon.jpeg';
+import bakiak from '../assets/bakiak.jpeg';
+import nampanBola from '../assets/nampan bola.png';
+
 interface CompetitionCategoriesProps {
   onCategorySelect?: (category: string, competition: string) => void;
 }
@@ -28,7 +40,7 @@ const CompetitionCategories: React.FC<CompetitionCategoriesProps> = ({ onCategor
       description: 'Lomba mengocok kardus untuk mengeluarkan bola',
       participants: 'Individu',
       videoUrl: 'https://www.tiktok.com/@fitra_hayuningtias21/video/7404128482332036358?is_from_webapp=1&sender_device=pc&web_id=7529131082454189586',
-      image: '/src/assets/goyang kardus.jpeg'
+      image: goyangKardus
     },
     {
       id: 'anak-rendah-2',
@@ -37,7 +49,7 @@ const CompetitionCategories: React.FC<CompetitionCategoriesProps> = ({ onCategor
       description: 'Lomba makan biskuit tanpa menggunakan tangan',
       participants: 'Individu',
       videoUrl: 'https://www.tiktok.com/@p3.2024._/video/7401911135051681029?is_from_webapp=1&sender_device=pc&web_id=7529131082454189586',
-      image: '/src/assets/makan biskuit.jpeg'
+      image: makanBiskuit
     },
     {
       id: 'anak-rendah-3',
@@ -46,7 +58,7 @@ const CompetitionCategories: React.FC<CompetitionCategoriesProps> = ({ onCategor
       description: 'Lomba meniup gelas plastik hingga jatuh',
       participants: 'Individu',
       videoUrl: 'https://www.tiktok.com/@ipbabaseh/video/7405183678864690438?is_from_webapp=1&sender_device=pc&web_id=7529131082454189586',
-      image: '/src/assets/tiup gelas.jpeg'
+      image: tiupGelas
     },
     {
       id: 'anak-rendah-4',
@@ -55,7 +67,7 @@ const CompetitionCategories: React.FC<CompetitionCategoriesProps> = ({ onCategor
       description: 'Lomba meniup bola pingpong ke garis finish',
       participants: 'Individu',
       videoUrl: 'https://www.tiktok.com/@karnarasa4/video/7401692845482052870?is_from_webapp=1&sender_device=pc&web_id=7529131082454189586',
-      image: '/src/assets/tiup bola.jpeg'
+      image: tiupBola
     },
     
   ];
@@ -68,7 +80,7 @@ const CompetitionCategories: React.FC<CompetitionCategoriesProps> = ({ onCategor
       description: 'Lomba lari menggunakan karung goni',
       participants: 'Individu',
       videoUrl: 'https://www.tiktok.com/@kakapratamaa16/video/7401766910976691461?is_from_webapp=1&sender_device=pc&web_id=7529131082454189586',
-      image: '/src/assets/balap karung helem.jpeg'
+      image: balapKarung
     },
     {
       id: 'anak-tinggi-2',
@@ -77,7 +89,7 @@ const CompetitionCategories: React.FC<CompetitionCategoriesProps> = ({ onCategor
       description: 'Lomba mengocok kardus untuk mengeluarkan bola',
       participants: 'Individu',
       videoUrl: 'https://www.tiktok.com/@fitra_hayuningtias21/video/7404128482332036358?is_from_webapp=1&sender_device=pc&web_id=7529131082454189586',
-      image: '/src/assets/goyang kardus.jpeg'
+      image: goyangKardus
     },
     {
       id: 'anak-tinggi-3',
@@ -86,7 +98,7 @@ const CompetitionCategories: React.FC<CompetitionCategoriesProps> = ({ onCategor
       description: 'Lomba berguling seperti trenggiling',
       participants: 'Individu',
       videoUrl: 'https://www.tiktok.com/@osissmanthreemm/video/7403349676897864965?is_from_webapp=1&sender_device=pc&web_id=7529131082454189586',
-      image: '/src/assets/teringgiling kardus.jpeg'
+      image: trenggiling
     },
     {
       id: 'anak-tinggi-4',
@@ -95,7 +107,7 @@ const CompetitionCategories: React.FC<CompetitionCategoriesProps> = ({ onCategor
       description: 'Lomba memasukkan bola ke corong',
       participants: 'Individu',
       videoUrl: 'https://www.tiktok.com/@sylviada30/video/7401747044068625669?is_from_webapp=1&sender_device=pc&web_id=7529131082454189586',
-      image: '/src/assets/corong.jpeg'
+      image: corong
     },
    
   ];
@@ -108,7 +120,7 @@ const CompetitionCategories: React.FC<CompetitionCategoriesProps> = ({ onCategor
       description: 'Lomba memasukkan paku ke dalam botol',
       participants: 'Individu',
       videoUrl: 'https://www.tiktok.com/@safitri_sn/video/7402942751714675974?is_from_webapp=1&sender_device=pc&web_id=7529131082454189586',
-      image: '/src/assets/cantolan galon.jpeg'
+      image: cantolanGalon
     },
     {
       id: 'ibu-2',
@@ -117,7 +129,7 @@ const CompetitionCategories: React.FC<CompetitionCategoriesProps> = ({ onCategor
       description: 'Lomba berjalan menggunakan bakiak bersama',
       participants: 'Kelompok (3 orang)',
       videoUrl: 'https://www.tiktok.com/@dewitasari/video/7534027804011154693?is_from_webapp=1&sender_device=pc&web_id=7529131082454189586',
-      image: '/src/assets/bakiak.jpeg'
+      image: bakiak
     }
   ];
 
@@ -129,7 +141,7 @@ const CompetitionCategories: React.FC<CompetitionCategoriesProps> = ({ onCategor
       description: 'Lomba membawa bola di atas nampan',
       participants: 'Individu',
       videoUrl: 'https://www.tiktok.com/@marcedung/video/7133144165319331098?is_from_webapp=1&sender_device=pc&web_id=7529131082454189586',
-      image: '/src/assets/nampan bola.png'
+      image: nampanBola
     },
     {
       id: 'bapak-2',
@@ -138,7 +150,7 @@ const CompetitionCategories: React.FC<CompetitionCategoriesProps> = ({ onCategor
       description: 'Lomba berjalan menggunakan bakiak bersama',
       participants: 'Kelompok (3 orang)',
       videoUrl: 'https://www.tiktok.com/@es_telercreamyncess/video/7403311058661690629?is_from_webapp=1&sender_device=pc&web_id=7529131082454189586',
-      image: '/src/assets/bakiak.jpeg'
+      image: bakiak
     }
   ];
 
