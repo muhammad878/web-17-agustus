@@ -6,7 +6,7 @@ import { Trophy, Users, Clock, Gift, Star, Award, Info, X, Baby, Heart, User, Pa
 import goyangKardus from '../assets/goyang kardus.jpeg';
 import makanBiskuit from '../assets/makan biskuit.jpeg';
 import tiupGelas from '../assets/tiup gelas.jpeg';
-import tiupBola from '../assets/tiup bola.jpeg';
+import mancingBotol from '../assets/mancing botol.png';
 import balapKarung from '../assets/balap karung helem.jpeg';
 import trenggiling from '../assets/teringgiling kardus.jpeg';
 import corong from '../assets/corong.jpeg';
@@ -62,22 +62,21 @@ const CompetitionCategories: React.FC<CompetitionCategoriesProps> = ({ onCategor
     },
     {
       id: 'anak-rendah-4',
-      name: 'Tiup Bola',
-      icon: Circle,
-      description: 'Lomba meniup bola pingpong ke garis finish',
+      name: 'Mancing Botol',
+      icon: Anchor,
+      description: 'Lomba memancing botol dengan tongkat dan tali',
       participants: 'Individu',
-      videoUrl: 'https://www.tiktok.com/@karnarasa4/video/7401692845482052870?is_from_webapp=1&sender_device=pc&web_id=7529131082454189586',
-      image: tiupBola
-    },
-    
+      videoUrl: 'https://vt.tiktok.com/ZSSG5JNqo/',
+      image: mancingBotol
+    }
   ];
 
   const anakTinggiCompetitions: Competition[] = [
     {
       id: 'anak-tinggi-1',
-      name: 'Balap Karung',
+      name: 'Balap Karung Helm',
       icon: Package,
-      description: 'Lomba lari menggunakan karung goni',
+      description: 'Lomba lari menggunakan karung goni dengan helm',
       participants: 'Individu',
       videoUrl: 'https://www.tiktok.com/@kakapratamaa16/video/7401766910976691461?is_from_webapp=1&sender_device=pc&web_id=7529131082454189586',
       image: balapKarung
@@ -108,14 +107,13 @@ const CompetitionCategories: React.FC<CompetitionCategoriesProps> = ({ onCategor
       participants: 'Individu',
       videoUrl: 'https://www.tiktok.com/@sylviada30/video/7401747044068625669?is_from_webapp=1&sender_device=pc&web_id=7529131082454189586',
       image: corong
-    },
-   
+    }
   ];
 
   const ibuCompetitions: Competition[] = [
     {
       id: 'ibu-1',
-      name: 'Cantolan Cukrukuk (Individu)',
+      name: 'Cantolan Kepala (Individu)',
       icon: Anchor,
       description: 'Lomba memasukkan paku ke dalam botol',
       participants: 'Individu',
@@ -124,33 +122,33 @@ const CompetitionCategories: React.FC<CompetitionCategoriesProps> = ({ onCategor
     },
     {
       id: 'ibu-2',
-      name: 'Bakiak (Kelompok)',
-      icon: Footprints,
-      description: 'Lomba berjalan menggunakan bakiak bersama',
-      participants: 'Kelompok (3 orang)',
+      name: 'Estafet Nampan Bola (Kelompok)',
+      icon: Square,
+      description: 'Lomba estafet membawa bola di atas nampan',
+      participants: 'Kelompok',
       videoUrl: 'https://www.tiktok.com/@dewitasari/video/7534027804011154693?is_from_webapp=1&sender_device=pc&web_id=7529131082454189586',
-      image: bakiak
+      image: nampanBola
     }
   ];
 
   const bapakCompetitions: Competition[] = [
     {
       id: 'bapak-1',
-      name: 'Nampan Bola (Individu)',
-      icon: Square,
-      description: 'Lomba membawa bola di atas nampan',
+      name: 'Goyang Kardus Bola (Individu)',
+      icon: Package,
+      description: 'Lomba mengocok kardus untuk mengeluarkan bola',
       participants: 'Individu',
       videoUrl: 'https://www.tiktok.com/@marcedung/video/7133144165319331098?is_from_webapp=1&sender_device=pc&web_id=7529131082454189586',
-      image: nampanBola
+      image: goyangKardus
     },
     {
       id: 'bapak-2',
-      name: 'Bakiak (Kelompok)',
-      icon: Footprints,
-      description: 'Lomba berjalan menggunakan bakiak bersama',
-      participants: 'Kelompok (3 orang)',
+      name: 'Estafet Nampan Bola (Kelompok)',
+      icon: Square,
+      description: 'Lomba estafet membawa bola di atas nampan',
+      participants: 'Kelompok',
       videoUrl: 'https://www.tiktok.com/@es_telercreamyncess/video/7403311058661690629?is_from_webapp=1&sender_device=pc&web_id=7529131082454189586',
-      image: bakiak
+      image: nampanBola
     }
   ];
 
@@ -206,9 +204,9 @@ const CompetitionCategories: React.FC<CompetitionCategoriesProps> = ({ onCategor
           }`}
         >
           <Baby className="h-4 w-4" />
-          <div className="text-left">
+                    <div className="text-left">
             <div>Anak Usia Rendah</div>
-            <div className="text-xs opacity-75">TK - Kelas 3 SD</div>
+            <div className="text-xs opacity-75">5-8 Tahun</div>
           </div>
         </button>
         <button
@@ -222,7 +220,7 @@ const CompetitionCategories: React.FC<CompetitionCategoriesProps> = ({ onCategor
           <User className="h-4 w-4" />
           <div className="text-left">
             <div>Anak Usia Tinggi</div>
-            <div className="text-xs opacity-75">Kelas 3 SD - 9 SMP</div>
+            <div className="text-xs opacity-75">9-12 Tahun</div>
           </div>
         </button>
         <button
@@ -252,8 +250,8 @@ const CompetitionCategories: React.FC<CompetitionCategoriesProps> = ({ onCategor
       {/* Debug Info */}
       <div className="text-center mb-4 text-sm text-gray-500">
         Menampilkan {competitionsToShow.length} lomba untuk kategori: {
-          activeFilter === 'anak-rendah' ? 'Anak Usia Rendah (TK - Kelas 3 SD)' :
-          activeFilter === 'anak-tinggi' ? 'Anak Usia Tinggi (Kelas 3 SD - 9 SMP)' :
+          activeFilter === 'anak-rendah' ? 'Anak Usia Rendah (5-8 Tahun)' :
+          activeFilter === 'anak-tinggi' ? 'Anak Usia Tinggi (9-12 Tahun)' :
           activeFilter === 'ibu' ? 'Ibu-Ibu' :
           activeFilter === 'bapak' ? 'Bapak-Bapak' : 'Tidak Diketahui'
         }
@@ -304,7 +302,7 @@ const CompetitionCategories: React.FC<CompetitionCategoriesProps> = ({ onCategor
                     <div className="flex items-center text-sm text-blue-800">
                       <Users className="h-4 w-4 mr-2" />
                       <span className="font-medium">
-                        {activeFilter === 'anak-rendah' ? 'TK - Kelas 3 SD' : 'Kelas 3 SD - 9 SMP'}
+                        {activeFilter === 'anak-rendah' ? '5-8 Tahun' : '9-12 Tahun'}
                       </span>
                     </div>
                   </div>
