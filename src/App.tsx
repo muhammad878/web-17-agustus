@@ -9,11 +9,15 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <Hero />
-      <div className="py-16 px-4">
+      <div id="home">
+        <Hero />
+      </div>
+      <div id="categories" className="py-16 px-4">
         <CompetitionCategories />
       </div>
-      <Timeline />
+      <div id="timeline">
+        <Timeline />
+      </div>
       <Footer />
     </div>
   );
